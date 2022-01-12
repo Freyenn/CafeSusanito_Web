@@ -24,6 +24,17 @@ body {
     -o-background-size: 5px 5px;
     -webkit-background-size: 5px 5px;
     background-size: 5px 5px;
+    /* background:
+    radial-gradient(var(--clr-rosa_oscuro) 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;  */
+
+    
 }
 
 .flex {
@@ -119,19 +130,103 @@ html {
   align-items: center;
   justify-content: center;
   transition: transform 500ms ease;
+  
 }
 
-.pag2 div{
+/* .pag2 div{
     transition: transform 500ms ease;
 }
 
 .pag2 div:hover{
     transform: scale(1.01);
-}
+} */
 
 
 .pag3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 150vh;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  margin-top: 2em;
+}
+
+/* Productos */
+.pag3 h1{
+  font-family: "Montaga";
+  font-size: 40px;
+  color: var(--clr-rosa_oscuro);
   
+}
+
+#p-cafe {
+  gap : 15em;
+  align-items: center;
+  justify-content: center;
+  width: 60em;
+}
+
+#p-cafe img{
+  height: 25em;
+}
+
+.cont-text{
+  flex-direction: column;
+}
+
+.cont-text h2{
+  color: var(--clr-rosa_oscuro);
+  font-family: "Montaga";
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  text-justify: inter-word;
+  
+}
+.cont-text button{
+  background-color: var(--clr-rosa_oscuro); 
+  color: white; 
+  border: none;
+  font-size: 15px;
+  padding: 0.5rem;
+  width: 5rem;
+}
+
+.cont-text button:hover{
+  background-color: var(--clr-rosa); 
+  transform: scale(1.1);
+}
+
+.cont-text .btns_rosas{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cont-text p{
+  color: var(--clr-rosa_oscuro);
+  font-family: "Montaga";
+  font-size: 20px;
+  text-decoration: none;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: hidden;
+}
+
+
+#cont-text-dorado h2{
+  color: goldenrod;
+}
+
+#cont-text-dorado button:hover{
+  background: goldenrod;
+  
+}
+
+/* Contacto */
+.pag4{
   width: 100%;
   height: 100vh;
 }
@@ -189,8 +284,13 @@ html {
   border: black 0.7rem solid;
   overflow: hidden;
   background: white;
-  transform: scaleY(1);
-  transition: transform 500ms ease;
+ 
+  
+  
+  transform: translate(-500px,0px);
+  transition: transform 700ms ease-out;
+  opacity: 0;
+  
   
 }
 
@@ -234,13 +334,14 @@ html {
 
 .imagen-cereza {
     height: 25rem;
-    border-radius: 10%;
+    border-radius: 0%;
     margin: 0 0 0 -50px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
-      transform: scaleY(1);
-    transition: transform 500ms ease;
+    transform: scale(0);
+     transition: transform 700ms ease-out;
   }
+  
 @media (max-width: 1000px){
 
     .contenedor-text {
@@ -252,17 +353,12 @@ html {
         font-size: 30px;
       }
       
-     
-      
       .contenedor-text p {
         font-size: 20px;
       }
       
-      
-
       .imagen-cereza {
         height: 20rem;
-        
       }
 }
 
@@ -293,6 +389,7 @@ html {
 .cont-tostado {
   width: 40rem;
   height: 35rem;
+  overflow: hidden;
 }
 
 .cont-tostado h1 {
